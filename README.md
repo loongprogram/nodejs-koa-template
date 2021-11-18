@@ -55,8 +55,8 @@ git push -u origin main
 ```bash
 config/
 ├── debug.json          # 本地开发环境
-├── development.json    # 测试环境
-└── production.json     # 生产环境
+├── test.json           # 测试环境
+└── release.json        # 生产环境
 ```
 
 ### 源代码
