@@ -1,6 +1,6 @@
 {
   "name": "koa-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "koa 项目模板",
   "scripts": {},
   "dependencies": {
