@@ -5,7 +5,7 @@ const logLevel = config.get('logLevel')
 const logger = winston.createLogger({
   level: logLevel,
   format: winston.format.json(),
-  defaultMeta: { service: 'payment-service' },
+  defaultMeta: { service: 'koa-template' },
   transports: [
     new winston.transports.Console()
   ]
