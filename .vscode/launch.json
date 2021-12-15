@@ -14,7 +14,8 @@
             "program": "${workspaceFolder}/src/app.js",
             "env": {
                 "NODE_ENV": "debug"
-            }
+            },
+            "outputCapture": "std"
         }
     ]
 }

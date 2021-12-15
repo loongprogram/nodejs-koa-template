@@ -9,7 +9,8 @@ const logger = require('../lib/logger')
  */
 const customOptions = {
   dialect: 'mysql',
-  timezone: '+08:00'
+  timezone: '+08:00',
+  logging: logger.debug
 }
 
 const sequelize = new Sequelize(Object.assign(customOptions, options))
@@ -19,7 +20,8 @@ sequelize.authenticate().then(() => {
   logger.info('Mysql connection has been established successfully.')
   return sequelize.sync()
 }).catch(error => {
-  logger.error('Unable to connect to the database:', error)
+  logger.error('Unable to connect to the database.')
+  logger.error(error)
 })
 
 module.exports = sequelize

@@ -1,15 +1,27 @@
-// TODO: 完善日志功能
+const winston = require('winston')
+const config = require('config')
+const logLevel = config.get('logLevel')
+
+const logger = winston.createLogger({
+  level: logLevel,
+  format: winston.format.json(),
+  defaultMeta: { service: 'payment-service' },
+  transports: [
+    new winston.transports.Console()
+  ]
+})
+
 class Logger {
   debug (msg) {
-    console.debug(msg)
+    logger.debug(msg)
   }
 
   info (msg) {
-    console.info(msg)
+    logger.info(msg)
   }
 
-  error (msg, ...optionalParams) {
-    console.error(msg, optionalParams)
+  error (msg) {
+    logger.error(msg)
   }
 }
 

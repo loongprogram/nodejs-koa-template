@@ -9,5 +9,6 @@
       "alter": true,
       "logging": false
     }
-  }
+  },
+  "logLevel": ""
 }

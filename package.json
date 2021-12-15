@@ -8,7 +8,8 @@
     "koa": "^2.13.1",
     "koa-joi-router": "^8.0.0",
     "mysql2": "^2.3.0",
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.6.5",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "standard": "^16.0.3"
