@@ -4,6 +4,7 @@
   "description": "koa 项目模板",
   "scripts": {},
   "dependencies": {
+    "config": "^3.3.6",
     "koa": "^2.13.1",
     "koa-joi-router": "^8.0.0",
     "mysql2": "^2.3.0",

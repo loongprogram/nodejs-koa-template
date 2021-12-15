@@ -1,0 +1,9 @@
+{
+    "sequelize": {
+      "host": "bj-cdb-0z0snq1a.sql.tencentcdb.com",
+      "port": 61542,
+      "database": "test",
+      "username": "test",
+      "password": "test@2021"
+    }
+  }

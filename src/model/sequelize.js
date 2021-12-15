@@ -1,5 +1,6 @@
 const { Sequelize } = require('sequelize')
-const options = require('../../config').sequelize
+const config = require('config')
+const options = config.get('sequelize')
 const logger = require('../lib/logger')
 
 /**
@@ -11,7 +12,7 @@ const customOptions = {
   timezone: '+08:00'
 }
 
-const sequelize = new Sequelize(Object.assign(options, customOptions))
+const sequelize = new Sequelize(Object.assign(customOptions, options))
 
 // 测试数据库连接是否成功
 sequelize.authenticate().then(() => {

@@ -4,6 +4,10 @@
     "port": 61542,
     "database": "test",
     "username": "test",
-    "password": "test@2021"
+    "password": "test@2021",
+    "sync": {
+      "alter": true,
+      "logging": false
+    }
   }
 }
