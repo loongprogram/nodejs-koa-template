@@ -1,3 +1,6 @@
+const { BizError } = require('../lib/error')
+const logger = require('../lib/logger')
+
 /**
  * 全局异常处理中间件
  */
@@ -11,7 +14,14 @@ class ErrorHandler {
       try {
         await next()
       } catch (error) {
-        console.error(error)
+        switch (true) {
+          case error instanceof BizError:
+            ctx.body = error.message
+            ctx.status = error.code
+            break
+          default:
+            logger.error(error)
+        }
         ctx.status = error.code || 500
       }
     }
