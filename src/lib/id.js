@@ -27,7 +27,7 @@ class ID {
     this.MAX_MACHINE = -1n ^ (-1n << this.MACHINE_BIT)
     this.MAX_SEQUENCE = -1n ^ (-1n << this.SEQUENCE_BIT)
     this.MACHINE_SHIFT = BigInt(this.SEQUENCE_BIT)
-    this.MILLISECOND_SHIFT = BigInt(this.MACHINE_SHIFT) + BigInt(this.MACHINE_BIT)
+    this.MILLISECOND_SHIFT = this.MACHINE_SHIFT + this.MACHINE_BIT
 
     this.lastMillisecond = 0n
     // TODO: workId 使用的IP D段，可能会冲突

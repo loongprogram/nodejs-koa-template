@@ -5,41 +5,11 @@ const Joi = router.Joi
 const user = router()
 user.prefix('/api/v1/user')
 
-/**
- * @swagger
- * /api/v1/user:
- *   get:
- *     summary: 获取用户列表
- *     description: 获取用户列表
- *     tags:
- *       - user
- *     responses:
- *       200:
- *         description: 成功获取
- */
 user.get('/', async ctx => {
   const result = await userService.getAll()
   ctx.body = result
 })
 
-/**
- * @swagger
- * /api/v1/user/:id:
- *   get:
- *     summary: 获取用户列表
- *     description: 获取用户列表
- *     tags:
- *       - user
- *     parameters:
- *       - name: 'id'
- *         in: 'path'
- *         description: 'ID of user to return'
- *         required: true
- *         type: 'string'
- *     responses:
- *       200:
- *         description: 成功获取
- */
 user.get('/:id', {
   validate: {
     params: {
