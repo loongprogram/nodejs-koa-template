@@ -4,6 +4,7 @@ ENV NODE_ENV=test
 
 COPY ./ ./
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tencentyun.com/g' /etc/apk/repositories \
+    && sed -i 's/https/http/g' /etc/apk/repositories \
     && apk add tzdata \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo Asia/Shanghai > /etc/timezone \
